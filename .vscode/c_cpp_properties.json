@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/zachary/ArduinoIDE/hardware/arduino/avr/**",
+                "/home/zachary/ArduinoIDE/hardware/tools/**",
+                "/home/zachary/ArduinoIDE/tools/**",
+                "/home/zachary/ArduinoIDE/libraries/**"
+            ],
+            "forcedInclude": [
+                "/home/zachary/ArduinoIDE/hardware/arduino/avr/cores/arduino/Arduino.h"
+            ],
+            "defines": [
+                "ARDUINO=10800"
+            ],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
