@@ -36,7 +36,7 @@
                 "-fno-threadsafe-statics",
                 "-Wno-error=narrowing"
             ],
-            "intelliSenseMode": "gcc-x64",
+            "intelliSenseMode": "linux-gcc-x64",
             "includePath": [
                 "/home/zachary/ArduinoIDE/hardware/arduino/avr/cores/arduino",
                 "/home/zachary/ArduinoIDE/hardware/arduino/avr/variants/standard",
@@ -47,8 +47,10 @@
             "forcedInclude": [
                 "/home/zachary/ArduinoIDE/hardware/arduino/avr/cores/arduino/Arduino.h"
             ],
-            "cStandard": "c11",
-            "cppStandard": "c++11",
+            "cStandard": "gnu17",
+            "cppStandard": "gnu++14",
+//            "cStandard": "c11",
+//            "cppStandard": "c++11",
             "defines": [
                 "F_CPU=16000000L",
                 "ARDUINO=10815",

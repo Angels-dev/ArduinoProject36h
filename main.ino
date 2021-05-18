@@ -8,32 +8,42 @@ int waterSensorValue;
 int atmosSensorValue;
 int windSensorValue;
 
+bool run=false;
+
 void setup()
 {
     pinMode(lightSensorPin,INPUT);
     pinMode(waterSensorPin,INPUT);
     pinMode(atmosSensorPin,INPUT);
     pinMode(windSensorPin,INPUT);
-    Serial.begin(1000);
+    Serial.begin(9600);
+    Serial.println("Enter 'start' to launch the sensors, 'stop' to stop them.");
 }
 
 void loop()
 {
-    lightSensorValue=analogRead(lightSensorPin);
-    Serial.write("Light Sensor Value : ");
-    Serial.write(lightSensorValue);
+    if (Serial.available()>0) {
+        if (Serial.read()==("start",DEC)) {run=true;}
+        if (Serial.read()==("stop",DEC)) {run=false;}
+    }
 
-    waterSensorValue=analogRead(waterSensorPin);
-    Serial.write("Ground humidity Sensor Value : ");
-    Serial.write(waterSensorValue);
+    if (run==true) {
+        lightSensorValue=analogRead(lightSensorPin);
+        Serial.print("Light Sensor Value : ");
+        Serial.println(lightSensorValue);
 
-    atmosSensorValue=analogRead(atmosSensorPin);
-    Serial.write("Atmospheric pressure Sensor Value : ");
-    Serial.write(atmosSensorValue);
+        waterSensorValue=analogRead(waterSensorPin);
+        Serial.print("Ground humidity Sensor Value : ");
+        Serial.println(waterSensorValue);
 
-    windSensorValue=analogRead(windSensorPin);
-    Serial.write("Wind Sensor Value : ");
-    Serial.write(windSensorValue);
+        atmosSensorValue=analogRead(atmosSensorPin);
+        Serial.print("Atmospheric pressure Sensor Value : ");
+        Serial.println(atmosSensorValue);
 
-    delay(1000);
+        windSensorValue=analogRead(windSensorPin);
+        Serial.print("Wind Sensor Value : ");
+        Serial.println(windSensorValue);
+
+        delay(1000);
+    }
 }
