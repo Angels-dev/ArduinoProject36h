@@ -1,4 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "programmer": "arduino:avrispmkii"
+    "programmer": "arduino:avrispmkii",
+    "port": "/dev/ttyS0"
 }

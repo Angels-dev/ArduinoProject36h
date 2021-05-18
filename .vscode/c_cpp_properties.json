@@ -13,7 +13,8 @@
                 "/home/zachary/ArduinoIDE/hardware/arduino/avr/cores/arduino/Arduino.h"
             ],
             "defines": [
-                "ARDUINO=10800"
+                "ARDUINO=10800",
+                "USBCON"
             ],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "gnu17",
