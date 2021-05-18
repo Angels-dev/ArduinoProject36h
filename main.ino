@@ -1,7 +1,16 @@
+const int lightSensorPin=5;
+const int waterSensorPin=6;
+const int atmosSensorPin=7;
+const int SensorPin=8;
+
 
 void setup()
 {
-    pinMode(2,OUTPUT);
+    pinMode(lightSensorPin,INPUT);
+    pinMode(waterSensorPin,INPUT);
+    pinMode(atmosSensorPin,INPUT);
+    pinMode(SensorPin,INPUT);
+    Serial.begin(9600);
 }
 
 void loop()
