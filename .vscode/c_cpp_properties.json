@@ -400,7 +400,6 @@
                 "__SACCUM_MIN__=(-0X1P7HK-0X1P7HK)",
                 "__DBL_HAS_QUIET_NAN__=1",
                 "__SIG_ATOMIC_MIN__=(-__SIG_ATOMIC_MAX__ - 1)",
-                "AVR=1",
                 "__BUILTIN_AVR_FMULS=1",
                 "__cpp_return_type_deduction=201304",
                 "__INTPTR_TYPE__=int",
@@ -554,6 +553,7 @@
                 "__ATOMIC_ACQ_REL=4",
                 "__ATOMIC_RELEASE=3",
                 "__BUILTIN_AVR_FMUL=1",
+                "AVR=1",
                 "USBCON"
             ]
         }
