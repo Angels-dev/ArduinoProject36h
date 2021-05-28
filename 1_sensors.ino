@@ -10,18 +10,7 @@ int windSensorValue;
 
 bool run=false;
 
-void setup()
-{
-    pinMode(lightSensorPin,INPUT);
-    pinMode(waterSensorPin,INPUT);
-    pinMode(atmosSensorPin,INPUT);
-    pinMode(windSensorPin,INPUT);
-    Serial.begin(9600);
-    Serial.println("Enter 'start' to launch the sensors, 'stop' to stop them.");
-}
-
-void loop()
-{
+void sensors() {
     if (Serial.available()>0) {
         if (Serial.read()==("start",DEC)) {run=true;}
         if (Serial.read()==("stop",DEC)) {run=false;}
