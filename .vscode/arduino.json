@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "arduino:avrispmkii",
-    "port": "/dev/ttyACM0",
-    "sketch": "0_main.ino_"
+    "sketch": "0_main.ino",
+    "port": "COM1"
 }
